@@ -1,0 +1,13 @@
+What happens when you initialize a repository? Why do you need to do it?
+When we initailize a repository .git (hidden) folder gets created, which contains metadata about the tracking
+of files. git init is the command used to initialize a repository. This command doesn't commit anything yet, it
+just puts in the information required to track any future commits to that folder.
+git status command tells us the status of the current commit - tracked, untracked files, files modified from the
+last commit.
+'Initial commit' comment in the status log signifies that we still need to make the first commit.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+Staging area is an intermediate area between working dir and repo; git add command adds the untracked files to staging
+area and with a git commit command all the files in the staging area are committed to the repo. Files in staging area
+are still not tracked.
+
