@@ -1,0 +1,40 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+FC is the diff command I used to see the differences between old and new js files; by comparing 
+the differences shown as result of this command, I was able to pin point the typo "spacr" in the
+new js file.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+By having the entire history of file changes, I can quickly go back to the previous version(s) and see the differences -
+check the correctness of the old code base in the new file and the latest changes added as per the given requirement.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+We can stick to one logical change per commit solution when we manually invoke a commit. It helps in keeping track of the changes in incremental steps functionality wise. When the files are getting auto committed, there might be unnecessary versions or versions which don't complete a logical functionality.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+There would be inter-related files like the files in asteroids game - index.html, index.css and game_new.js, all these have to be proper for the game
+to work correctly. So allowing multiple files in one commit helps to retain the connectivity and have a working copy with the added changes in that version.
+
+How can you use the commands git log and git diff to view the history of files?
+$ git log
+$ git diff <first_commit_id> <second_commit_id>
+The diff command lists all the files' differences between first and second commits (listed as a & b)
+
+How might using version control make you more confident to make changes that could break something?
+With version control I would be confident to go back to a previous version which I know for sure was working properly
+and compare the differences between the working copy and latest copy for changes which might have broken the 
+functionality.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+I want to start writing the android app code and use git version control to maintain a repository of my code.
+
+ utils.js
+ return !(
+      bounds1.end_x < bounds2.start_x ||
+      bounds2.end_x < bounds1.start_x ||
+      bounds1.end_y < bounds2.start_y ||
+      bounds2.end_y < bounds1.start_y
+    );
+
+    pappu.js
+       clone.x += utils.randomNumber(5, 10);
+       clone.y += utils.randomNumber(-20, 20);
