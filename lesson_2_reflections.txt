@@ -11,3 +11,38 @@ Staging area is an intermediate area between working dir and repo; git add comma
 area and with a git commit command all the files in the staging area are committed to the repo. Files in staging area
 are still not tracked.
 
+How can you use the staging area to make sure you have one commit per logical change?
+We can use git diff command to check the differences between the working directory and staging area.
+And git diff --staged to check the differences between the staging area and repository.
+After making all the modifications in the working directory pertaining to one logical change, we can use git diff command
+to go over all the changes at once. Once we are confident we can add these files to the staging area; and compare them with
+the current repo version - we would see the same differences as above.
+Using git commit we can move all changes to the current repo.
+git reset --hard command resets any changes added to the staging area. It brings back the files to the state when the last commit
+was executed.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Lets say three developers are working on some new features which are completely independent, they all can create, checkout
+and work on their own branches, complete all the logical changes needed for their functionality and commit without disturbing the
+working main copy.
+
+How do the diagrams help you visualize the branch structure?
+The diagrams give us the child parent relation between the branches and help us to trace back to the most initial commit.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging two branched together will have all the commit changes of both the branches
+git diff <commit-id> will show the diffs b/w the commit-id and its parent
+git checkout -b <branch-name> commands checks out the current master to a branch named <branch-name>
+
+
+git show <commit-id> command shows the differences between commit-id version and its parent.
+After merging lets say we want to delete the branch (not a hard delete, but it just deletes the label, we would still have all the changes)
+git branch -d easy-mode command is used to delete the easy-mode branch label
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+When two developers are modifying the same file and if they are adding two different functions to that file then we can completely rely on 
+automatic merging since both the functions are needed at the end for both the functionalities to work.
+But when both devs are trying to add same functionality, we might need to check with both of them to decide on which one to finally keep.
+git merge master easy-mode command is used to merge the master and easy-mode branches
+This merge, as said before, creates a new commit and that will be our new master.
+
