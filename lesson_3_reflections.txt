@@ -1,0 +1,3 @@
+When would you want to use a remote repository rather than keeping all your work local?
+Using remote repository gives us freedom to add/modify our code from anywhere; also it will be help if multiple people are 
+contributing to the same repo. Using local repo only means keeping our changes/code private.
