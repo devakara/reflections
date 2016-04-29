@@ -5,3 +5,24 @@ contributing to the same repo. Using local repo only means keeping our changes/c
 Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 When multiple developers are working on the repo pushing their commits to remote, to keep the local repo up to date we need to 
 pull changes from remote manually.
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+If we want to have an existing repo on Github to be present on or copied to our Github account, then we need to use the fork option.
+We can clone a repo which is on Github to our local or clone command could be used to make a copy of our local repo.
+Branches can be created to spawn multiple versions of a code base so that developers can update & test their changes independently;
+and when they are ready with the final changes their code could be merged to form one main branch.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+Having a copy of the last known state of remote repo locally helps us to keep in mind the changes which have been already pushed to remote;
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+To collaborate without Git and GitHub developers need to do incremental changes and resolve any conflicts manually for each functionality;
+which won't be easy as the code base grows larger. If a single developer is working and is not intending to spawn multiple branches at the
+same time then he could survive without Git & GitHub - as everything can be done locally.
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+Let's say if only one developer is working on the code base then making changes directly on the master makes a lot of sense. Also if there are no major functionalities which need to be added while having a copy of master/orginal code base up and running - directly changing the master makes sense.
+But let's say multiple developers are working on multiple functionalities and each one is having his own branch and pushing changes to the remote,
+then we might have to keep our local repo up to date (by pulling the changes and merging) before pushing our changes on to the remote.
+
+

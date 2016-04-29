@@ -46,3 +46,4 @@ But when both devs are trying to add same functionality, we might need to check 
 git merge master easy-mode command is used to merge the master and easy-mode branches
 This merge, as said before, creates a new commit and that will be our new master.
 
+
